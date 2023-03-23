@@ -71,11 +71,4 @@ class AlbumJdbcTemplateRepositoryTest {
         return album;
     }
 
-    @Test
-    void update() {
-    }
-
-    @Test
-    void deleteById() {
-    }
 }
