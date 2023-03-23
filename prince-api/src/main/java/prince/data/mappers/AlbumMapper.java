@@ -1,4 +1,4 @@
-package prince.data.mapper;
+package prince.data.mappers;
 
 import prince.models.Album;
 import org.springframework.jdbc.core.RowMapper;
