@@ -75,10 +75,10 @@ public class AlbumJdbcTemplateRepository implements AlbumRepository {
                 + "album_name = ?, "
                 + "release_year = ?, "
                 + "riaa_certification = ?, "
-                + "photo_url = ?, "
-                + "where album_id = ?";
+                + "photo_url = ? "
+                + "where album_id = ?;";
 
-        return jdbcTemplate.update(sql, album.getName(), album.getReleaseYear(), album.getRiaa(), album.getPhotoUrl()) > 0;
+        return jdbcTemplate.update(sql, album.getName(), album.getReleaseYear(), album.getRiaa(), album.getPhotoUrl(), album.getAlbumId()) > 0;
     }
 
     @Override
@@ -89,9 +89,9 @@ public class AlbumJdbcTemplateRepository implements AlbumRepository {
     }
 
     private void addSong(Album album) {
-        final String sql = "select song_id, song_name, video_url, track "
+        final String sql = "select song_id, song_name, video_url, track, album_id "
                 + "from song "
-                + "where album_id = ?";
+                + "where song_id = ?;";
 
         var song = jdbcTemplate.query(sql, new SongMapper(), album.getAlbumId());
         album.setSongs(song);
