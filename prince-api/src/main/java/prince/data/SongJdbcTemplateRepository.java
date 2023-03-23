@@ -1,11 +1,13 @@
 package prince.data;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import prince.data.mapper.SongMapper;
+import org.springframework.stereotype.Repository;
+import prince.data.mappers.SongMapper;
 import prince.models.Song;
 
 import java.util.List;
 
+@Repository
 public class SongJdbcTemplateRepository implements SongRepository {
 
     private final JdbcTemplate jdbcTemplate;
