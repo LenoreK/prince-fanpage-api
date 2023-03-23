@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import prince.models.Song;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
@@ -24,13 +26,17 @@ class SongJdbcTemplateRepositoryTest {
 
     @Test
     void findAll() {
+        List<Song> songs = repository.findAll();
+        assertNotNull(songs);
+        assertTrue(songs.size() >= 7 && songs.size() <= 11);
     }
 
     @Test
     void findById() {
         Song song = repository.findById(5);
         assertNotNull(song);
-
+        assertEquals(5, song.getSongId());
+        assertEquals("When Doves Cry", song.getName());
     }
 
     Song makeSong(){
