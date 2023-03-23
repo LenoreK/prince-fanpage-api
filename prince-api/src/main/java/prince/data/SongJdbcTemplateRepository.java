@@ -1,10 +1,14 @@
 package prince.data;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import prince.data.mappers.SongMapper;
 import prince.models.Song;
 
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.List;
 
 @Repository
@@ -31,5 +35,27 @@ public class SongJdbcTemplateRepository implements SongRepository {
         return jdbcTemplate.query(sql, new SongMapper(), songId).stream()
                 .findFirst()
                 .orElse(null);
+    }
+
+    @Override
+    public Song add(Song song) {
+        final String sql = "insert into song (song_name, video_url, track, album_id) values (?,?,?,?);";
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int rowsAffected = jdbcTemplate.update(connection -> {
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, song.getName());
+            ps.setString(2, song.getVideoUrl());
+            ps.setInt(3, song.getTrackNum());
+            ps.setInt(4, song.getAlbumId());
+            return ps;
+        }, keyHolder);
+
+        if (rowsAffected <= 0) {
+            return null;
+        }
+
+        song.setSongId((keyHolder.getKey().intValue()));
+        return song;
     }
 }

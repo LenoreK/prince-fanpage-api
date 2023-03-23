@@ -11,4 +11,6 @@ public interface SongRepository {
     List<Song> findAll();
     @Transactional
     Song findById(int songId);
+
+    Song add(Song song);
 }
