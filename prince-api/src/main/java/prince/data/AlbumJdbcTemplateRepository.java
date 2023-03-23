@@ -48,7 +48,7 @@ public class AlbumJdbcTemplateRepository implements AlbumRepository {
 
     @Override
     public Album add(Album album) {
-        final String sql = "insert into album (album_name, release_year, riaa_certification, photo_url) values (?,?);";
+        final String sql = "insert into album (album_name, release_year, riaa_certification, photo_url) values (?,?,?,?);";
 
         KeyHolder keyHolder = new GeneratedKeyHolder();
         int rowsAffected = jdbcTemplate.update(connection -> {

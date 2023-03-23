@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 class SongJdbcTemplateRepositoryTest {
 
+    final static int NEXT_SONG_ID = 11;
+
     @Autowired
     SongJdbcTemplateRepository repository;
 
@@ -37,6 +39,14 @@ class SongJdbcTemplateRepositoryTest {
         assertNotNull(song);
         assertEquals(5, song.getSongId());
         assertEquals("When Doves Cry", song.getName());
+    }
+
+    @Test
+    void shouldAdd(){
+        Song song = makeSong();
+        Song actual = repository.add(song);
+        assertNotNull(actual);
+        assertEquals(NEXT_SONG_ID, actual.getSongId());
     }
 
     Song makeSong(){
