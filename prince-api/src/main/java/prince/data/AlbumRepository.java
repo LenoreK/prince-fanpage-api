@@ -9,6 +9,7 @@ public interface AlbumRepository {
 
     List<Album> findAll();
 
+    @Transactional
     Album findByID(int albumId);
 
     Album add(Album album);

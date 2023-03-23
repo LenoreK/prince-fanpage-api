@@ -1,13 +1,6 @@
-<<<<<<< HEAD:prince-api/src/main/java/prince/data/mappers/SongMapper.java
+
 package prince.data.mappers;
 
-import prince.models.Album;
-=======
-package prince.data.mapper;
-
-import org.springframework.jdbc.core.PreparedStatementSetter;
-import org.springframework.jdbc.core.RowCallbackHandler;
->>>>>>> 9663cf2d0cbe79101c5c266d9014b71082a8b3d3:prince-api/src/main/java/prince/data/mapper/SongMapper.java
 import org.springframework.jdbc.core.RowMapper;
 import prince.models.Song;
 
@@ -26,8 +19,4 @@ public class SongMapper implements RowMapper<Song> {
         song.setAlbumId(resultSet.getInt("album_id"));
         return song;
     }
-<<<<<<< HEAD:prince-api/src/main/java/prince/data/mappers/SongMapper.java
 }
-=======
-}
->>>>>>> 9663cf2d0cbe79101c5c266d9014b71082a8b3d3:prince-api/src/main/java/prince/data/mapper/SongMapper.java
