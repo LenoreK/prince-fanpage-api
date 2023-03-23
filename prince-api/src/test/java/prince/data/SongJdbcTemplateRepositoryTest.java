@@ -49,6 +49,17 @@ class SongJdbcTemplateRepositoryTest {
         assertEquals(NEXT_SONG_ID, actual.getSongId());
     }
 
+    @Test
+    void shouldUpdate(){
+        Song song = makeSong();
+        song.setSongId(9);
+        assertTrue(repository.update(song));
+    }
+
+    @Test
+    void shouldDelete(){
+        assertTrue(repository.deleteById(1));
+    }
     Song makeSong(){
         Song song = new Song();
         song.setName("New Song");

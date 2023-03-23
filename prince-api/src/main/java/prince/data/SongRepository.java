@@ -13,4 +13,8 @@ public interface SongRepository {
     Song findById(int songId);
 
     Song add(Song song);
+
+    boolean update(Song song);
+
+    boolean deleteById(int songId);
 }

@@ -58,4 +58,22 @@ public class SongJdbcTemplateRepository implements SongRepository {
         song.setSongId((keyHolder.getKey().intValue()));
         return song;
     }
+
+    @Override
+    public boolean update(Song song) {
+
+        final String sql = "update song set "
+                + "song_name = ?, "
+                + "video_url = ?, "
+                + "track = ?, "
+                + "album_id = ? "
+                + "where song_id = ?;";
+
+        return jdbcTemplate.update(sql, song.getName(), song.getVideoUrl(), song.getTrackNum(), song.getAlbumId(), song.getSongId()) > 0;
+    }
+
+    @Override
+    public boolean deleteById(int songId){
+        return jdbcTemplate.update("delete from song where song_id = ?", songId) > 0;
+    }
 }
