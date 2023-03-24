@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { findAll } from "../service/albumService";
-import Album from "./Album";
 
 function Home() {
+
+    const styles = {
+        
+
+    };
 
     const [albums, setAlbums] = useState([]);
     const navigate = useNavigate();
