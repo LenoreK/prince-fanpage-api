@@ -1,5 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Confirmation from "./components/Confirmation";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import Error from "./components/Error";
+import Delete from "./components/Delete";
 
 function App() {
   return (
