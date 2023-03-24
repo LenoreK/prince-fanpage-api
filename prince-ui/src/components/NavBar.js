@@ -2,17 +2,13 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/add">Add Album</Link>
-                </li>
-            </ul>
+        <nav className="navbar">
+            <h1>Albums</h1>
+            <div className="col d-flex justify-content-end">
+                <Link to="/add" className="btn btn-primary">Add Album</Link>
+            </div>    
         </nav>
-    )
+    );
 }
 
 export default NavBar;
