@@ -1,25 +1,29 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { findAll } from "../service/albumService";
+import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
+import AlbumCard from "./AlbumCard";
 
-function Album({ album }) {
+export default function Album() {
+
+    const [albums, setAlbums] = useState([]);
     const navigate = useNavigate();
 
-    const handleDelete = () => {
-        navigate(`/delete/${album.albumId}`)
-    };
+    useEffect(() => {
+        findAll()
+            .then(setAlbums)
+            .catch(() => navigate("/error"));
+    }, [navigate])
 
     return (
-
-        <div className="row">
-            <div className="col">{album.albumId}</div>
-            <div className="col">{album.name}</div>
-            <div className="col">{album.yearReleased}</div>
-            <div className="col">{album.riaa}</div>
-            <div className="col-4">
-                <Link to={`/edit/${album.albumId}`} >Update</Link>
-                <button onClick={handleDelete}>Delete</button>
+        <>
+            <NavBar />
+            <Link to="/" className="btn btn-success my-2">Home</Link>
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2">
+                {albums.map(a => <AlbumCard key={a.albumId} album={a} />)}
             </div>
-        </div>
-    )
-}
+        </>
+    );
 
-export default Album;
+}
