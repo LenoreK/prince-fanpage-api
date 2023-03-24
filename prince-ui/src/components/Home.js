@@ -1,3 +1,5 @@
+import { getElementError } from "@testing-library/react";
+import {Link} from "react-router-dom";
 
 function Home() {
 
@@ -8,11 +10,6 @@ function Home() {
         backgroundPosition: 'center',
         height: '110vh',
   };
-
-  window.addEventListener("DOMContentLoaded", event => {
-    const audioElement = document.getElementById("audioElement");
-    audioElement.play();
-  });
 
     
     return(
@@ -26,11 +23,15 @@ function Home() {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
+
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
-                <a class="nav-link" href="/album">Albums</a>
+                <a class="nav-link" href="/albums">Albums</a>
                 <a class="nav-link" href="/agency">Top Songs</a>
                
                 
+
+                
+
               </div>
             </div> 
     
@@ -38,12 +39,9 @@ function Home() {
         </nav>
         <audio id="audioElement" autoplay loop controls>
           <source src="resources/prince.mp3" type="audio/mp3"/>
-        </audio>    
+        </audio>
       </div>
     
-        
-        
-       
   
   );
 
