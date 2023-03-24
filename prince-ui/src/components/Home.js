@@ -17,16 +17,16 @@ function Home() {
         <div style={styles}> 
         <nav class="navbar navbar-expand">
         <div class="container-fluid">
-            <h1>Welcome to Prince Fan Page</h1>        
+            <h1 class="header">Welcome to Prince Fan Page</h1>        
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                <a class="nav-link" href="/albums">Albums</a>
+                <a class="nav-link active link" aria-current="page" href="/">Home</a>
+                <a class="nav-link link" href="/albums">Albums</a>
 
-                <a class="nav-link" href="/topSongs">Top Songs</a>
+                <a class="nav-link link" href="/topSongs">Top Songs</a>
   
               </div>
             </div> 

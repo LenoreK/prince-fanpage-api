@@ -39,3 +39,17 @@ body {
   #grid {
     width: 100vh;
   }
+
+  .link {
+    margin-left: 3vh;
+    color: darkslategrey;
+    font-size: 20px;
+  }
+
+  .header {
+    margin-left: 1vh;
+  }
+
+  .add {
+    margin-right: 1vh;
+  }
