@@ -3,8 +3,7 @@ import Confirmation from "./components/Confirmation";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Error from "./components/Error";
-import Delete from "./components/Delete";
-import AlbumForm from "./components/AlbumForm";
+import Delete from "./components/Delete";git 
 
 function App() {
   return (
