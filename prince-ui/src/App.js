@@ -6,6 +6,7 @@ import Error from "./components/Error";
 import Delete from "./components/Delete";
 import AlbumForm from "./components/AlbumForm";
 import NotFound from "./components/NotFound";
+import Albums from "./components/Albums"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/error" element={<Error />} />
       <Route path="/" element={<Home />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/Albums" element={<Albums/>}/>
       </Routes>
     </Router>
   )

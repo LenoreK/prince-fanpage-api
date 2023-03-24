@@ -1,26 +1,30 @@
 import { Link, useNavigate } from "react-router-dom";
+import { findAll } from "../service/albumService"
+import {useEffect, useState} from "react";
+import Album from "./Album";
 
-function Album({ album }) {
-    const navigate = useNavigate();
+function Albums() {
+    const [albums, setAlbums] = useState([]);
 
-    const handleDelete = () => {
-        navigate(`/delete/${album.albumId}`)
-    };
+    useEffect(() => {
+        findAll()
+            .then(setAlbums)
+            .catch(alert);
+    }, []);
 
     return (
-
+        <>
         <div className="row">
-            <div className="col">{album.albumId}</div>
-            <div className="col">{album.name}</div>
-            <div className="col">{album.photoUrl}</div>
-            <div className="col">{album.yearReleased}</div>
-            <div className="col">{album.riaa}</div>
+            <div className="col">Id</div>
+            <div className="col">Name</div>
+            <div className="col">Year Released</div>
+            <div className="col">RIAA Certification</div>
             <div className="col-4">
-                <Link to={`/edit/${album.albumId}`} >Update</Link>
-                <button onClick={handleDelete}>Delete</button>
             </div>
         </div>
+        {albums.map(a => <Album key={a.albumId} album={a} />)}
+        </>
     )
 }
 
-export default Album;
+export default Albums;
