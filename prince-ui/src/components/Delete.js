@@ -12,13 +12,13 @@ function Delete() {
         if (id) {
             findById(id)
                 .then(setAlbum)
-                .catch(() => navigate("/album"));
+                .catch(() => navigate("/albums"));
         } else {
             navigate("/");
         }
     }, [id, navigate])
 
-    const cancel = () => navigate("/album");
+    const cancel = () => navigate("/albums");
     const handleDelete = () => {
         deleteById(id)
             .then(() => navigate("/album"))

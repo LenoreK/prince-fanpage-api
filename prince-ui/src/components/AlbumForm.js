@@ -43,9 +43,9 @@ function AlbumForm() {
         <form onSubmit={handleSubmit}>
             <h2>{album.albumId ? "Update An Album" : "Add An Album"}</h2>
 
-            <div>
-                <label htmlFor="name">Album Name</label>
-                <input 
+            <div class="mb-3">
+                <label htmlFor="name">Album Name: </label>
+                <input
                     type="text"
                     id="name"
                     required
@@ -53,8 +53,10 @@ function AlbumForm() {
                     name="name"
                     onChange={handleChange}
                 />
-                <label htmlFor="releaseYear">Release Year</label>
-                <input 
+            </div>
+            <div class="mb-3">
+                <label htmlFor="releaseYear">Release Year: </label>
+                <input
                     type="int"
                     id="releaseYear"
                     required
@@ -62,31 +64,26 @@ function AlbumForm() {
                     name="releaseYear"
                     onChange={handleChange}
                 />
+            </div>
+            <div class="mb-3">
                 <label htmlFor="riaa">RIAA Certification</label>
-                <input 
+                <input
                     type="text"
                     id="riaa"
                     value={album.riaa}
                     name="riaa"
                     onChange={handleChange}
                 />
-                <label htmlFor="photoUrl">Album Art URL</label>
-                <input 
-                    type="text"
-                    id="photoUrl"
-                    value={album.photoUrl}
-                    name="photoUrl"
-                    onChange={handleChange}
-                />
             </div>
+            
 
             <div>
                 <button type="submit">Save</button>
                 <Link to="/">Cancel</Link>
             </div>
-        </form>
+        </form >
     );
-    
+
 }
 
 export default AlbumForm;
