@@ -20,4 +20,17 @@ Content-Type: application/json
 }
 
 ###
-PUT {{url}}/album
+PUT {{url}}/album/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Batman",
+    "releaseYear": 1990,
+    "riaa": "platinum",
+    "photoUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBatman_%2528album%2529&psig=AOvVaw01RKzhhjj73Z9_XYTGcrzA&ust=1679754867442000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCKDirNPk9P0CFQAAAAAdAAAAABAE",
+    "songs": [],
+    "albumId": 4
+}
+
+###
+DELETE {{url}}/album/2 HTTP/1.1
