@@ -16,12 +16,7 @@ export default function Album() {
             .catch(() => navigate("/error"));
     }, [navigate])
 
-<<<<<<< HEAD
-    return(
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2">
-            {albums.map(a => <AlbumCard key={a.albumId} album={a} />)}
-        </div>
-=======
+
     return (
         <>
             <NavBar />
@@ -30,7 +25,7 @@ export default function Album() {
                 {albums.map(a => <AlbumCard key={a.albumId} album={a} />)}
             </div>
         </>
->>>>>>> 0dbac980bd4cd9fab0af56a2a5262c477449eb33
+
     );
 
 }
