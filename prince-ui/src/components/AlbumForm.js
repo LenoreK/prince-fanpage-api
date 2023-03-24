@@ -79,7 +79,7 @@ function AlbumForm() {
 
             <div>
                 <button type="submit">Save</button>
-                <Link to="/">Cancel</Link>
+                <Link to="/albums">Cancel</Link>
             </div>
         </form >
     );
