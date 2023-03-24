@@ -14,7 +14,7 @@ export default function AlbumCard({ album }) {
                         </div>
                     </div>
                     <p className="card-text">
-                        RIAA Certification: {album}
+                        RIAA Certification: {album.riaa}
                     </p>
                 </div>
             </div>

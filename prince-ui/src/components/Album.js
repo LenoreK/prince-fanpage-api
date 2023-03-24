@@ -11,12 +11,12 @@ export default function Album() {
     useEffect(() => {
         findAll()
             .then(setAlbums)
-            .catch(() => navigate("/500"));
+            .catch(() => navigate("/error"));
     }, [navigate])
 
     return(
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2">
-            {albums.map(g => <AlbumCard key={a.albumId} album={a} />)}
+            {albums.map(a => <AlbumCard key={a.albumId} album={a} />)}
         </div>
     );
     
