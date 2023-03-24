@@ -23,11 +23,11 @@ function Home() {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
                 <a class="nav-link" href="/albums">Albums</a>
-                <a class="nav-link" href="/agency">Top Songs</a>
-            
+
+                <a class="nav-link" href="/topSongs">Top Songs</a>
+  
               </div>
             </div> 
     

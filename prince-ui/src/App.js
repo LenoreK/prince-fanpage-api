@@ -7,11 +7,11 @@ import Delete from "./components/Delete";
 import AlbumForm from "./components/AlbumForm";
 import NotFound from "./components/NotFound";
 import Albums from "./components/Albums"
+import TopSongs from "./components/TopSongs";
 
 function App() {
   return (
     <Router>
-     
 
       <Routes>
       <Route path="/add" element={<AlbumForm />} />
@@ -22,6 +22,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/Albums" element={<Albums/>}/>
+      <Route path="/topSongs" element={<TopSongs />}/>
       </Routes>
     </Router>
   )
