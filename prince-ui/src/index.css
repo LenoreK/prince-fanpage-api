@@ -19,16 +19,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    margin: 10vh;
+    padding-bottom: 5vh;
+    border-radius: 10px;
   }
 
   #top-songs {
-    background-color: white;
     margin: 3vh;
     border-radius: 10px;
     padding: 1vh;
     text-align: center;
-    width:50vh;
-    flex-grow: 1;
   }
 
   .navbar {
@@ -36,8 +37,5 @@ body {
   }
   
   #grid {
-    margin: 3vh;
-    width: 80vh;
-    flex-grow: 5;
+    width: 100vh;
   }
-
