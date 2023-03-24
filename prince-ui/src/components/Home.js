@@ -1,4 +1,5 @@
 
+
 function Home() {
 
     const styles = {
@@ -9,13 +10,18 @@ function Home() {
         height: '100vh',
   };
 
+  window.addEventListener("DOMContentLoaded", event => {
+    const audioElement = document.getElementById("audioElement");
+    audioElement.play();
+  });
+
     
     return(
     
         <div style={styles}> 
         <nav class="navbar navbar-expand-lg bg-success">
         <div class="container-fluid">
-            <h1>Welcome to Prince Fan Page</h1>
+            <h1>Welcome to Prince Fan Page</h1>        
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,6 +36,9 @@ function Home() {
     
         </div>
         </nav>
+        <audio id="audioElement" autoplay loop controls>
+          <source src="resources/prince.mp3" type="audio/mp3"/>
+        </audio>    
       </div>
     
         
