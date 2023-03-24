@@ -28,7 +28,7 @@ public class AlbumsController {
         return albumService.findAll();
     }
 
-    @GetMapping
+    @GetMapping("/{albumId}")
     public ResponseEntity<Album> findById(@PathVariable int albumId) {
         Album album = albumService.findByID(albumId);
         if (album == null) {
