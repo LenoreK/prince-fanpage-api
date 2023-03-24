@@ -12,16 +12,16 @@ function Delete() {
         if (id) {
             findById(id)
                 .then(setAlbum)
-                .catch(() => navigate("/"));
+                .catch(() => navigate("/album"));
         } else {
             navigate("/");
         }
     }, [id, navigate])
 
-    const cancel = () => navigate("/");
+    const cancel = () => navigate("/album");
     const handleDelete = () => {
         deleteById(id)
-            .then(() => navigate("/"))
+            .then(() => navigate("/album"))
             .catch(() => navigate("/error", { state: { msg: "⛔" } }));
     };
 
