@@ -1,5 +1,4 @@
 
-
 function Home() {
 
     const styles = {
