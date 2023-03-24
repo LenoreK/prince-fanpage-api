@@ -2,11 +2,11 @@
 function Home() {
 
     const styles = {
-        backgroundImage:`url(https://images.unsplash.com/photo-1495576596703-e0063a132b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3B5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60`,
-        backgroundColor: `grey`,
+        backgroundImage:`url(https://wallpaper.dog/large/10836890.jpg`,
+        backgroundColor: '',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh',
+        height: '110vh',
   };
 
   window.addEventListener("DOMContentLoaded", event => {
@@ -18,7 +18,7 @@ function Home() {
     return(
     
         <div style={styles}> 
-        <nav class="navbar navbar-expand-lg bg-success">
+        <nav class="navbar navbar-expand">
         <div class="container-fluid">
             <h1>Welcome to Prince Fan Page</h1>        
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@ function Home() {
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
-                <a class="nav-link" href="/album">Album</a>
+                <a class="nav-link" href="/album">Albums</a>
                 <a class="nav-link" href="/agency">Top Songs</a>
                 
               </div>
