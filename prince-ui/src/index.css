@@ -32,12 +32,27 @@ body {
     text-align: center;
   }
 
+ 
   .navbar {
     background-color: rgb(157, 157, 214);
   }
   
   #grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
     width: 100vh;
+  }
+
+  #grid li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .list-group-item {
+    font-size: 20px;
+    color: purple;
   }
 
   .link {
@@ -53,3 +68,5 @@ body {
   .add {
     margin-right: 1vh;
   }
+
+  

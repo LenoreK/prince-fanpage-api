@@ -15,6 +15,7 @@ export default function Album() {
             .then(setAlbums)
             .catch(() => navigate("/error"));
     }, [navigate])
+    console.log(albums);
 
 
     return (

@@ -16,7 +16,7 @@ function Albums() {
     return (
         <>
             <NavBar/>
-            <Link to="/" className="btn btn-success my-2">Home</Link>
+            
             <div className="row">
                 <div className="col">Id</div>
                 <div className="col">Name</div>

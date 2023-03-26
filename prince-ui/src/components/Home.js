@@ -31,18 +31,18 @@ function Home() {
     return(
     
         <div style={styles}> 
-        <nav class="navbar navbar-expand">
-        <div class="container-fluid">
-            <h1 class="header">Welcome to Prince Fan Page</h1>        
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand">
+        <div className="container-fluid">
+            <h1 className="header">Welcome to Prince Fan Page</h1>        
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav">
 
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                <a class="nav-link" href="/albums">Albums</a>
-                <a class="nav-link" href="/topSongs">Top Songs</a>
+                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                <a className="nav-link" href="/albums">Albums</a>
+                <a className="nav-link" href="/topSongs">Top Songs</a>
                 <button  onClick={Play}>💜</button>
 
   
@@ -51,7 +51,7 @@ function Home() {
     
         </div>
         </nav>
-        <audio id="audioElement" autoplay>
+        <audio id="audioElement" autoPlay>
           <source src="resources/prince.mp3" type="audio/mp3"/>
         </audio>
       </div>

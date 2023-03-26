@@ -43,7 +43,7 @@ function AlbumForm() {
         <form onSubmit={handleSubmit}>
             <h2>{album.albumId ? "Update An Album" : "Add An Album"}</h2>
 
-            <div class="mb-3">
+            <div className="mb-3">
                 <label htmlFor="name">Album Name: </label>
                 <input
                     type="text"
@@ -54,7 +54,7 @@ function AlbumForm() {
                     onChange={handleChange}
                 />
             </div>
-            <div class="mb-3">
+            <div className="mb-3">
                 <label htmlFor="releaseYear">Release Year: </label>
                 <input
                     type="int"
@@ -65,7 +65,7 @@ function AlbumForm() {
                     onChange={handleChange}
                 />
             </div>
-            <div class="mb-3">
+            <div className="mb-3">
                 <label htmlFor="riaa">RIAA Certification</label>
                 <input
                     type="text"
