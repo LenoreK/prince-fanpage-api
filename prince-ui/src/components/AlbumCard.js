@@ -25,8 +25,8 @@ const handleDelete = () => {
                         RIAA Certification: {album.riaa}
                     </p>
                     <div className="d-grid gap-2 d-md-block">
-                        <Link to={`/edit/${album.albumId}`} class="btn btn-primary" type="button">Update</Link>
-                        <button onClick={handleDelete} class="btn btn-danger" type="button">Delete</button>
+                        <Link to={`/edit/${album.albumId}`} className="btn btn-primary" type="button">Update</Link>
+                        <button onClick={handleDelete} className="btn btn-danger" type="button">Delete</button>
                     </div>
                 </div>
             </div>
