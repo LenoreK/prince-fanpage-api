@@ -19,7 +19,7 @@ function App() {
         <Route path="/edit/:id" element={<AlbumForm />} />
         <Route path="/delete/:id" element={<Delete />} />
         <Route path="/confirmation" element={<Confirmation />} />
-        <Route path="/Album" element={<Album />} />
+        <Route path="/Albums" element={<Album />} />
         <Route path="/topSongs" element={<TopSongs />} />
         <Route path="/error" element={<Error />} />
         <Route path="*" element={<NotFound />} />

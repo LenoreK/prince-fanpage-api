@@ -51,7 +51,7 @@ function Home() {
     
         </div>
         </nav>
-        <audio id="audioElement" autoPlay>
+        <audio id="audioElement" autoplay>
           <source src="resources/prince.mp3" type="audio/mp3"/>
         </audio>
       </div>
