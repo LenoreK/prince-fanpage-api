@@ -8,7 +8,7 @@ const handleDelete = () => {
     navigate(`/delete/${album.albumeId}`)
 };
 
-    // const designer = game.gameRoles.find(gr => gr.role.name === "Designer");
+    
 
     return (
         <div className="col">

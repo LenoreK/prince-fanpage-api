@@ -15,7 +15,7 @@ function TopSongs() {
             <li class="list-group-item">Let's Go Crazy</li>
             <li class="list-group-item">Sign O' The Times</li>
             <li class="list-group-item">I Wanna Be Your Lover</li>
-            <li class="list-group-item">If I Was Your Girlfirend</li>
+            <li class="list-group-item">If I Was Your Girlfriend</li>
             </ul>
             </div>
     </>
